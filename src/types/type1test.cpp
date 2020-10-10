@@ -14,6 +14,7 @@
 template <typename T>
 void test (T const& t)
 {
+    // 如果是yes 既然  0  那么输出..
     if (IsFundaT<T>::Yes) {
         std::cout << "T is fundamental type" << std::endl;
     }
@@ -27,6 +28,9 @@ class MyType {
 
 int main()
 {
+    // 如果是基础类型 yes = 1
     test(7);
+
+    // 如果不是基础类型走主要模版类型  不走特例模版类型
     test(MyType());    
 }

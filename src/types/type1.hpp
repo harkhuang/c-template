@@ -8,7 +8,12 @@
  * This software is provided "as is" without express or implied
  * warranty, and with no claim as to its suitability for any purpose.
  */
+
+
+
 // primary template: in general T is no fundamental type
+
+// 通用类型中yes = 0
 template <typename T>
 class IsFundaT {
   public:
@@ -16,6 +21,7 @@ class IsFundaT {
 };
 
 // macro to specialize for fundamental types
+// 基础类型中yes = 1
 #define MK_FUNDA_TYPE(T)               \
     template<> class IsFundaT<T> {     \
       public:                          \
