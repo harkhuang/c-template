@@ -13,8 +13,14 @@ class CompoundT<T&> {       // partial specialization for references
   public:
     enum { IsPtrT = 0, IsRefT = 1, IsArrayT = 0,
            IsFuncT = 0, IsPtrMemT = 0 };
+
+    // 定义类型T是基础类型       
     typedef T BaseT;
+
+    // 定义给予T构建对类型中对BottomT成员对属性
     typedef typename CompoundT<T>::BottomT BottomT;
+
+    // 定义CompoundT
     typedef CompoundT<void> ClassT;
 };
 
