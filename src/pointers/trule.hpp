@@ -14,11 +14,13 @@
 template <typename T>
 class Holder;
 
+
+// 模版类主体
 template <typename T>
 class Trule {
   private:
     T* ptr;    // objects to which the trule refers (if any)
-
+    
   public:
     // constructor to ensure that a trule is used only as a return type
     // to transfer holders from callee to caller!

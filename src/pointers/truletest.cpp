@@ -27,6 +27,6 @@ Trule<Something> load_something()
 
 int main() 
 {
-    Holder<Something> ptr(load_something());
+    Holder<Something>    ptr(load_something());
     //...
 }
