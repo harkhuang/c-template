@@ -1,2 +1,2 @@
 # c-template
-c++ template study
+c++ template code
